@@ -22,7 +22,24 @@ weight:Float!
     products: [Product!]!
      product(id: ID!): Product 
   }
-
+type Mutation{
+createProduct(
+ name: String!
+    price: Float!
+    category: String!
+    stock: Int! 
+):Product!
+,
+  updateProduct(
+    id: ID!
+    name: String!
+    price: Float!
+    category: String!
+    stock: Int!
+  ): Product!,
+  deleteProduct(id: ID!): Boolean!
+  
+}
   
 `;
 
